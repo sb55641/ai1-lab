@@ -1,0 +1,134 @@
+
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background-image: url("city-6749295_1920.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #ffeb3b;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(0, 0, 0);
+  padding: 25px 20px;
+  border-bottom: 4px solid #ffeb3b;
+  box-shadow: 0 4px 10px rgba(255, 235, 59, 0.3);
+  text-align: center;
+  border-radius: 20px;
+}
+
+h1 {
+  color: #ffee58;
+  font-style: oblique;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 10px 0 0 0;
+  margin: 0;
+}
+
+nav li {
+  background-color: #ffeb3b;
+  color: #2c003e;
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+main {
+  padding: 20px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr;
+  
+}
+
+section {
+  display: flex;           
+  flex-wrap: nowrap;          
+  align-items: flex-start;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.65);
+  border: 2px solid #ffeb3b;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(255, 235, 59, 0.4);
+}
+
+section .text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+h2 {
+  color: #ffeb3b;
+  border-bottom: 2px solid #ffee58;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+
+h3 {
+  color: #ff9800;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+p, ul {
+  color: #ffeb3b;
+}
+
+ul {
+  list-style-type: square;
+  margin-left: 25px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+footer {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 25px 20px;
+  color: #ffeb3b;
+  border-top: 3px solid #ffee58;
+
+  position: relative;
+  border-radius: 0 0 15px 15px;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  section img {
+    max-width: 100%;
+  }
+
+  section .text {
+    width: 100%;
+  }
+}
