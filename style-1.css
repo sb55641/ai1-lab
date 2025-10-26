@@ -1,0 +1,104 @@
+body{
+  background-color: aqua;
+}
+main{
+    position: center;
+    background: rgb(51, 218, 112);
+    border-radius: 15px;
+    width: 800px;
+    height: 500px;
+    margin: 10px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    
+}
+#bar{
+    background: rgb(40, 167, 86);
+    height: 65px;
+    border-color: black;
+    border-width: 3px;
+    border-style: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+#search{
+    background-color: white;
+    border-radius: 15px;
+    width: 70%;
+    height: 30%;
+    margin-left: 15px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center left;
+    padding: 10px;
+    color:rgba(0, 0, 0, 0.428);
+}
+#button{
+    display: flex;               
+    justify-content: space-between; 
+    align-items: center;          
+    width: 300px;                
+    height: 100px;
+    position: fixed;
+    top: 400px;
+    left: 450px;
+    
+}
+#button div {
+    background-color: rgb(40, 167, 86);
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    flex: 1;                   
+    text-align: center;
+    margin: 5px;               
+}
+#new-task{
+    display: flex;
+    justify-content: left;
+    margin: 35px;
+    gap: 10px
+}
+#list{
+    height: 65%;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    background-color: #d4edda; 
+}
+
+.task-editing {
+    background-color: #fff3cd;
+    margin-right: 0px;
+}
+
+mark {
+    background-color: orange;
+    color: black;
+}
+
+.task button {
+    margin-left: 10px;
+    cursor: pointer;
+}
+.task span.text {
+    flex: 1; 
+}
+.task span.date {
+    flex-basis: 100px; 
+    text-align: right;
+    margin-left: 20px; 
+}
