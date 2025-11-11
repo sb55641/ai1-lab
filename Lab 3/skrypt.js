@@ -5,7 +5,10 @@ L.marker([53.430127, 14.564802]).addTo(map);
 let savedRaster = null;
 
 document.getElementById("getLocation").addEventListener("click", function(){
-    if(!navigator.geolocation) return alert("No geolocation");
+    if(!navigator.geolocation){
+
+        return alert("No geolocation");
+    } 
     navigator.geolocation.getCurrentPosition(pos=>{
         map.setView([pos.coords.latitude, pos.coords.longitude]);
     });
@@ -42,7 +45,10 @@ function checkPuzzleCompletion(){
     let slots = document.querySelectorAll("#gridTarget .puzzle-slot");
     slots.forEach(slot=>{
         slot.classList.remove("correct");
-        if(slot.children.length === 0) correct = false;
+        if(slot.children.length === 0){
+
+            correct = false;
+        }
         else {
             let imgId = slot.children[0].id;
             let pos = slot.dataset.pos;
@@ -83,7 +89,6 @@ document.getElementById("saveRaster").addEventListener("click", function(){
 
         savedRaster = rasterCanvas.toDataURL("image/png");
 
-        // pokaż podgląd
         let preview = document.getElementById("savedRasterPreview").getContext("2d");
         preview.clearRect(0,0,300,300);
         preview.drawImage(canvas,0,0,300,300);
