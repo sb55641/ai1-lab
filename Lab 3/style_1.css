@@ -1,0 +1,42 @@
+body { 
+    font-family: Arial, sans-serif;
+    margin: 20px; 
+}
+#map { 
+    width: 500px; 
+    height: 300px; 
+    margin-bottom: 10px; 
+}
+.grid-wrapper { display: flex; 
+    gap: 40px; 
+    margin-top: 20px; 
+    align-items: flex-start; 
+}
+.grid { 
+    width: 300px; 
+    height: 300px; 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    grid-template-rows: repeat(4, 1fr); 
+    border: 2px dashed #7f7fe9; 
+}
+.puzzle-slot { 
+    width: 75px; 
+    height: 75px; 
+    border: 1px dashed #ccc; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-sizing: border-box; 
+}
+.draggable { 
+    cursor: grab; 
+    border: 2px solid transparent;
+ }
+.correct { 
+    background-color: rgba(0,255,0,0.15); 
+}
+#savedRasterPreview { 
+    margin-top: 10px; 
+    border: 1px solid #ccc; 
+}
