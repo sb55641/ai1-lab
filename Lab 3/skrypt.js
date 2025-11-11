@@ -11,6 +11,7 @@ document.getElementById("getLocation").addEventListener("click", function(){
     } 
     navigator.geolocation.getCurrentPosition(pos=>{
         map.setView([pos.coords.latitude, pos.coords.longitude]);
+        L.marker([pos.coords.latitude, pos.coords.longitude]).addTo(map);
     });
 });
 
@@ -70,9 +71,7 @@ function checkPuzzleCompletion(){
 
 function notifyCompletion(){
     if(Notification.permission === "granted"){
-        new Notification("🎉 Puzzle Completed!", {
-            body: "Gratulacje! Wszystkie elementy są na właściwym miejscu."
-        });
+        new Notification("🎉 Puzzle Ułożone!");
     } else if(Notification.permission !== "denied"){
         Notification.requestPermission().then(perm=>{
             if(perm === "granted") notifyCompletion();
