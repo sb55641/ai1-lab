@@ -74,7 +74,9 @@ function notifyCompletion(){
         new Notification("🎉 Puzzle Ułożone!");
     } else if(Notification.permission !== "denied"){
         Notification.requestPermission().then(perm=>{
-            if(perm === "granted") notifyCompletion();
+            if(perm === "granted"){
+                notifyCompletion();
+            } 
         });
     }
 }
